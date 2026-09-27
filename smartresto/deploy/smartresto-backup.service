@@ -1,0 +1,10 @@
+[Unit]
+Description=SmartResto daily SQLite backup
+
+[Service]
+Type=oneshot
+User=smartresto
+Group=smartresto
+WorkingDirectory=/opt/smartresto
+ExecStart=/bin/sh -c '/opt/smartresto/.venv/bin/python scripts/backup.py data/smartresto.sqlite3 /var/backups/smartresto/smartresto-$(date +%%Y%%m%%d-%%H%%M%%S).sqlite3'
+UMask=0077

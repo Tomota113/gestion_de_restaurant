@@ -1,0 +1,13 @@
+*.zip
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.env
+**/.env
+*.log
+**/*.log
+.DS_Store
+SmartResto-starter/
+SmartResto-starter (1)/

@@ -1,0 +1,7 @@
+# Point local DNS smartresto.home.arpa to the server LAN IP.
+# Install this Caddy instance's root CA as trusted on every tablet.
+smartresto.home.arpa {
+    tls internal
+    encode gzip
+    reverse_proxy 127.0.0.1:8000
+}
